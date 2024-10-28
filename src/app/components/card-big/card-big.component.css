@@ -1,0 +1,25 @@
+.card-big {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-color);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  height: 400px;
+}
+
+.card-big .cover img {
+  width: 100%;
+}
+
+.card-big img {
+  object-fit: cover;
+}
+
+.card-big p {
+  color: var(--text-secondary-color);
+}
+
+.card-big span {
+  color: var(--text-secondary-color);
+  font-weight: 500
+}

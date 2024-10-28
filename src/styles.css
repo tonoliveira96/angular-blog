@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  /* Cores principais do tema escuro */
+  --background-color: #121212;
+  --surface-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --text-secondary-color: #a0a0a0;
+  --accent-color: #bb86fc;
+  --border-color: #333333;
+  --input-bg-color: #2b2b2b;
+
+  /* Cores de estado */
+  --success-color: #03dac6;
+  --error-color: #cf6679;
+  --link-color: #bb86fc;
+  --link-hover-color: #9a68e8;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
