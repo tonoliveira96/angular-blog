@@ -1,9 +1,9 @@
 <diV class="card-small">
   <div class="card-small-image">
-    <img src="" alt="">
+    <img src={{image_url}} alt="">
   </div>
-  <div>
-    <span>26 de Outubro de 2024</span>
-    <h3>Mais uma notícia interessante</h3>
-  </div>
+  <a [routerLink]="['post', id]">
+    <span>{{date}}</span>
+    <h3>{{title}}</h3>
+  </a>
 </diV>

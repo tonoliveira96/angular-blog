@@ -20,3 +20,7 @@
 .card-small span {
   color: var(--text-secondary-color);
 }
+
+.card-small a {
+  text-decoration: none;
+}

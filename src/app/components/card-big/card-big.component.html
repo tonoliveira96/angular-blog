@@ -1,8 +1,10 @@
 <div class="card-big">
   <div class="cover">
-    <img src="../../../assets/post-cover.jpg" alt="cover">
+    <img src="{{ image_url }}" alt="cover" />
   </div>
-  <span>28 de Outubro de 2024</span>
-  <h2>As novidades estão aqui</h2>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum quis pariatur ad, omnis facilis tempore. Doloremque deleniti recusandae, exercitationem aperiam atque nihil explicabo impedit ratione animi, itaque repellendus incidunt dolorem.</p>
+  <a [routerLink]="['post', id]">
+    <span>{{ date }}</span>
+    <h2>{{ title }}</h2>
+    <p>{{ description }}</p>
+  </a>
 </div>
