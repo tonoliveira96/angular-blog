@@ -2,28 +2,32 @@
 <section class="main-container">
   <div>
     <app-card-big
-      id="1"
-      date="26 de Outubro de 2024"
-      image_url="https://scc10.com.br/wp-content/uploads/2024/10/Hunter-x-Hunter--jpg.webp"
-      description="Hunter × Hunter é uma série de mangá escrita e ilustrada por Yoshihiro Togashi. Os capítulos são serializados na revista Weekly Shōnen Jump desde 3 de março de 1998, onde são compilados e publicados em formato tankobon"
-      title="Hunter x Hunter está de volta"
+      id="{{
+      posts[0].id
+      }}"
+      date="{{
+      posts[0].date
+      }}"
+      image_url="{{
+      posts[0].image_url
+      }}"
+      description="{{
+      posts[0].description
+      }}"
+      title="{{ posts[0].title }}"
     />
   </div>
   <div class="feed">
+  @for (item of posts; track $index) {
+
     <app-card-small
-      date="27 de Outubro de 2024"
-      image_url="https://scc10.com.br/wp-content/uploads/2024/10/Hunter-x-Hunter--jpg.webp"
-      title="EP 150 de HxH lançado"
+      id="{{ item.id }}"
+      date="{{ item.date }}"
+      image_url="{{ item.image_url }}"
+      title="{{ item.title }}"
     />
-    <app-card-small
-      date="27 de Outubro de 2024"
-      image_url="https://scc10.com.br/wp-content/uploads/2024/10/Hunter-x-Hunter--jpg.webp"
-      title="EP 150 de HxH lançado"
-    />
-    <app-card-small
-      date="27 de Outubro de 2024"
-      image_url="https://scc10.com.br/wp-content/uploads/2024/10/Hunter-x-Hunter--jpg.webp"
-      title="EP 150 de HxH lançado"
-    />
-  </div>
+
+  }
+</div>
+
 </section>

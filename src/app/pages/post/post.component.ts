@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { fakePosts } from '../../../data/fake-data';
 
 @Component({
   selector: 'app-post',
@@ -13,7 +14,7 @@ export class PostComponent implements OnInit {
   @Input() description!: string;
   @Input() image_url!: string;
   @Input() date!: string;
-  private id:string | null = "0";
+  private id: string | null = "0";
 
   constructor(
     private router: ActivatedRoute
@@ -21,7 +22,21 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.paramMap.subscribe(value => {
-      this.id = value.get("id")
+      this.id = value.get("id");
     });
+
+    this.setValuesToComponent(this.id);
+  }
+
+  setValuesToComponent(id: string | null) {
+    const post = fakePosts
+      .find(post => post.id === id);
+
+    if (post) {
+      this.date = post.date,
+      this.title = post.title,
+      this.description = post.description,
+      this.image_url = post.image_url
+    }
   }
 }
