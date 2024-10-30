@@ -18,16 +18,13 @@
     />
   </div>
   <div class="feed">
-  @for (item of posts; track $index) {
-
-    <app-card-small
-      id="{{ item.id }}"
-      date="{{ item.date }}"
-      image_url="{{ item.image_url }}"
-      title="{{ item.title }}"
-    />
-
+    @for (item of posts; track $index) {
+      <app-card-small
+        id="{{ item.id }}"
+        date="{{ item.date }}"
+        image_url="{{ item.image_url }}"
+        title="{{ item.title }}"
+      />
   }
 </div>
-
 </section>
