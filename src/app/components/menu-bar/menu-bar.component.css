@@ -22,3 +22,8 @@ a:hover {
   opacity: 0.5;
   transition: 500ms;
 }
+
+.active-link{
+  border-bottom: 2px solid var(--text-color);
+  opacity: 0.75;
+}

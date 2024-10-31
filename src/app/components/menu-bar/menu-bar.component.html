@@ -1,8 +1,19 @@
 <nav>
   <ul>
-    <li><a href="/">HOME</a></li>
-    <li><a href="/post">POSTS</a></li>
-    <li><a href="">SOBRE</a></li>
+    <li>
+      <a
+        [routerLink]="['/']"
+        [routerLinkActive]="['active-link']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >HOME</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/post', 1]" [routerLinkActive]="['active-link']"
+        >POSTS</a
+      >
+    </li>
+    <li><a [routerLink]="">SOBRE</a></li>
   </ul>
-  <hr/>
+  <hr />
 </nav>
