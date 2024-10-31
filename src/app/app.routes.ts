@@ -4,11 +4,20 @@ import { PostComponent } from './pages/post/post.component';
 
 export const routes: Routes = [
   {
-    path: 'post/:id',
-    component: PostComponent
-  },
-  {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'post',
+    component: PostComponent, children: [
+      {
+        path: ':id',
+        component: PostComponent
+      },
+    ]
+  },
+  {
+    path: '**',
+    redirectTo: '/'
   }
 ];

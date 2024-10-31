@@ -14,7 +14,7 @@ export class PostComponent implements OnInit {
   @Input() description!: string;
   @Input() image_url!: string;
   @Input() date!: string;
-  private id: string | null = "0";
+  private id: string | null = null;
 
   constructor(
     private router: ActivatedRoute
@@ -24,7 +24,7 @@ export class PostComponent implements OnInit {
     this.router.paramMap.subscribe(value => {
       this.id = value.get("id");
     });
-
+    console.log(this.id)
     this.setValuesToComponent(this.id);
   }
 
