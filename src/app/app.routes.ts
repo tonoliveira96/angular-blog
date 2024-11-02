@@ -8,13 +8,8 @@ export const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'post',
-    component: PostComponent, children: [
-      {
-        path: ':id',
-        component: PostComponent
-      },
-    ]
+    path: 'post/:id',
+    component: PostComponent
   },
   {
     path: '**',
