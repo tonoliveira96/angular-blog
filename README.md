@@ -2,4 +2,4 @@
 
 Projeto usado para prática de criação de SPA com Angular
 
-![](./assets/angular-blog.gif)
+![](assets/angular-blog.gif)
